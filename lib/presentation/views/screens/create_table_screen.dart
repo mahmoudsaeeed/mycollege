@@ -24,6 +24,7 @@ class _CreateTableScreenState extends State<CreateTableScreen> {
     Orientation.landscape;
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

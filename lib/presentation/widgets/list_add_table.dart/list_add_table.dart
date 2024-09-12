@@ -16,7 +16,7 @@ class ListAddTable extends StatelessWidget {
 
         /// loop on days length
         itemCount: Days.values.length,
-        itemBuilder: (context, index) {
+        itemBuilder: (context, dayNumber) {
           // / in each day it will create [DayIntervalShape] depend on interval number
           return Column(
             mainAxisSize: MainAxisSize.min,
@@ -26,10 +26,10 @@ class ListAddTable extends StatelessWidget {
                   ValueListenableBuilder(
                     valueListenable: secondBox.listenable(),
                     builder: (context, value, child) => DayIntervalsShape(
-                      dayName: Days.values.elementAt(index),
+                      dayName: Days.values.elementAt(dayNumber),
                       // dayName: "tests",
                       noOfIntervals: value.get(intervalSharedPref),
-                      dayNo: index,
+                      dayNumber: dayNumber,
                     ),
                   ),
                 

@@ -48,3 +48,12 @@ task {
 في قسم الجدول 
 لو مافيش داتا اتسجلت قبل كدا هيدخلنا اول حاجه ع صفحة تسجيل بيانات 
 وبعدين ندوس حفظ هيرجعنا خطوة لورا ويطلب ميل الجهاز وبعدين يظهرلنا الجدول بالبيانات اللي سجلناها
+
+{
+    intervalType[dayNumber][intervalNumber]
+
+    intervalType00,
+    intervalType01,
+    intervalType02,
+    intervalType03,
+}

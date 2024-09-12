@@ -17,8 +17,9 @@ void main() async {
   Hive.registerAdapter(DayTableModelAdapter());
 
   await Hive.openBox<DayTableModel>(tableBox);
-  
+
   await Hive.openBox(secondBoxName);
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

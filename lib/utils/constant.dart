@@ -8,14 +8,19 @@ const String homeView = "/";
 const String myTableView = "myTable";
 
 //! ####################
-      //!   secondBoxName variable
+//!   secondBoxName variable
 // مستخدمه في اسناد القيمه ل ساكندبوكس  في
 // interval_number_menu
 const String intervalSharedPref = "interval";
 
-
-
 //! ####################
+
+final List<String> intervalTypes = [
+  "محاضرة",
+  "سكشن",
+  "فاضي"
+];
+
 //* names of arabic days
 Map<Days, String> arDay = {
   Days.Saturday: "السبت",

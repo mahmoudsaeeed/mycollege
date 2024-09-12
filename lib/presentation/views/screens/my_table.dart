@@ -43,22 +43,23 @@ Widget myTableScreen(context) {
     body: SingleChildScrollView(
       child: ValueListenableBuilder(
         valueListenable: secondBox.listenable(),
-        builder: (context, value, child) => Table(
+        builder: (context, totalIntervalNumbers, child) => Table(
           border: const TableBorder(
             horizontalInside: BorderSide(width: 1),
             verticalInside: BorderSide(width: 1),
           ),
           children: [
-            // mainRowInTable(value.intervalNumber!),
+            // mainRowInTable(totalIntervalNumbers.intervalNumber!),
             mainRowInTable(
-              value.get(intervalSharedPref),
+              totalIntervalNumbers.get(intervalSharedPref)??0,
             ),
             ...List.generate(
               Days.values.length,
-              (index) {
+              (dayNumber) {
                 return bodyRowInTable(
-                  Days.values.elementAt(index), index,
-                  value.get(intervalSharedPref),
+                  Days.values.elementAt(dayNumber), 
+                  dayNumber,
+                  totalIntervalNumbers.get(intervalSharedPref)??0,
                   // value.intervalNumber!,
                 );
               },

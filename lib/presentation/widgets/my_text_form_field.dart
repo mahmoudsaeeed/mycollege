@@ -13,7 +13,7 @@ class MyTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     GlobalKey<FormFieldState> txtFormfieldKey = GlobalKey();
     return Container(
-      width: 300,
+      width: 200,
       margin: const EdgeInsets.all(10),
       // padding: const EdgeInsets.all(20),
 
