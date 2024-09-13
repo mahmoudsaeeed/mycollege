@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import '../../../generated/l10n.dart';
-import '../../widgets/myTable/my_popup_menu.dart';
-import '../../../utils/MyTable_Method/row_table.dart';
-import '../../../utils/constant.dart';
-import '../../../utils/def.dart';
+import 'package:mycollege/presentation/views/screens/MyTable_Screens/my_table_screen.dart';
+import 'package:mycollege/presentation/views/screens/MyTable_Screens/rotation_screen.dart';
 
 class MyTable extends StatelessWidget {
   const MyTable({
@@ -17,69 +13,8 @@ class MyTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return OrientationBuilder(builder: (context, orientation) {
       return orientation == Orientation.portrait
-          ? rotationScreen(context)
-          : myTableScreen(context);
+          ? const RotationScreen()
+          : const MyTableScreen();
     });
   }
 }
-
-
-Widget rotationScreen(context) {
-  return Scaffold(
-    appBar: AppBar(),
-    body: Column(
-      children: [
-        Image.asset("assets/images/rotateMobile.gif"),
-        Text(S.of(context).turnMobile),
-      ],
-    ),
-  );
-}
-
-Widget myTableScreen(context) {
-  return Scaffold(
-    appBar: AppBar(),
-    floatingActionButton: const MyPopupMenu(),
-    body: SingleChildScrollView(
-      child: ValueListenableBuilder(
-        valueListenable: secondBox.listenable(),
-        builder: (context, totalIntervalNumbers, child) => Table(
-          border: const TableBorder(
-            horizontalInside: BorderSide(width: 1),
-            verticalInside: BorderSide(width: 1),
-          ),
-          children: [
-            // mainRowInTable(totalIntervalNumbers.intervalNumber!),
-            mainRowInTable(
-              totalIntervalNumbers.get(intervalSharedPref)??0,
-            ),
-            ...List.generate(
-              Days.values.length,
-              (dayNumber) {
-                return bodyRowInTable(
-                  Days.values.elementAt(dayNumber), 
-                  dayNumber,
-                  totalIntervalNumbers.get(intervalSharedPref)??0,
-                  // value.intervalNumber!,
-                );
-              },
-            )
-          ],
-        ),
-      ),
-    ),
-  );
-}
-// class MyTableScreen extends StatelessWidget {
-//   const MyTableScreen({super.key, required this.intervalNumber});
-//   final int intervalNumber;
-//   @override
-//   Widget build(BuildContext context) {
-//     return 
-//   }
-// }
-
-
-// Widget myTableScreen(context) {
-  
-// }

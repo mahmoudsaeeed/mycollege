@@ -9,21 +9,8 @@ import '../../../utils/def.dart';
 
 import '../../widgets/list_add_table.dart/list_add_table.dart';
 
-class CreateTableScreen extends StatefulWidget {
+class CreateTableScreen extends StatelessWidget {
   const CreateTableScreen({super.key});
-
-  @override
-  State<CreateTableScreen> createState() => _CreateTableScreenState();
-}
-
-class _CreateTableScreenState extends State<CreateTableScreen> {
-  // GlobalKey<FormState> formKey = GlobalKey();
-  @override
-  void initState() {
-    super.initState();
-    Orientation.landscape;
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +21,8 @@ class _CreateTableScreenState extends State<CreateTableScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                // Form(
-                //   key: formKey,
                 const IntervalPart(),
                 const ListAddTable(),
-                // ),
                 ValueListenableBuilder(
                   valueListenable: secondBox.listenable(),
                   builder: (context, value, child) => ElevatedButton(
@@ -88,7 +72,7 @@ class IntervalPart extends StatelessWidget {
             width: 50,
             color: Colors.blue,
             margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: const IntervalNumberMenu(),
+            child: const IntervalNumberDropDown(),
           ),
         ],
       ),

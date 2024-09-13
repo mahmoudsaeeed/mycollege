@@ -7,20 +7,14 @@ import '../../utils/def.dart';
 import 'screens/create_table_screen.dart';
 
 class MyTableView extends StatelessWidget {
-  const MyTableView({super.key,});
+  const MyTableView({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider<AddDataInTableCubit>(
-          create: (context) => AddDataInTableCubit(),
-        ),
-      ],
+    return BlocProvider<AddDataInTableCubit>(
+      create: (context) => AddDataInTableCubit(),
       child: box.isEmpty ? const CreateTableScreen() : const MyTable(),
     );
-    // child: BlocProvider(
-    //   create: (context) => AddDataInTableCubit(),
-    //   child: const CreateTableScreen(),
-    // ));
   }
 }

@@ -13,7 +13,6 @@ class DayIntervalsShape extends StatelessWidget {
     required this.dayNumber,
   });
 
-  //TODO  dayName should be from enum in constants
 
   final Days dayName;
   final int noOfIntervals, dayNumber;

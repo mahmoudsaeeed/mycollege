@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import '../../utils/constant.dart';
 import '../../utils/def.dart';
 
-class IntervalNumberMenu extends StatefulWidget {
-  const IntervalNumberMenu({super.key});
+class IntervalNumberDropDown extends StatefulWidget {
+  const IntervalNumberDropDown({super.key});
 
   @override
-  State<IntervalNumberMenu> createState() => _IntervalNumberMenuState();
+  State<IntervalNumberDropDown> createState() => _IntervalNumberDropDownState();
 }
 
-class _IntervalNumberMenuState extends State<IntervalNumberMenu> {
+class _IntervalNumberDropDownState extends State<IntervalNumberDropDown> {
   int? currValue = 3;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+
     secondBox.put(intervalSharedPref, currValue!);
   }
 
@@ -36,7 +36,6 @@ class _IntervalNumberMenuState extends State<IntervalNumberMenu> {
         setState(() {
           currValue = value;
         });
-//!11111111111111111111111111111111111111111
 
         secondBox.put(intervalSharedPref, value);
         print(

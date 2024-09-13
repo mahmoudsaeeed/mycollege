@@ -21,9 +21,14 @@ class HomeView extends StatelessWidget {
                   Navigator.pushNamed(context, myTableView);
                 },
                 child: Container(
-                  padding: const EdgeInsets.all(30),
-                  color: Colors.grey,
-                  child:  Text(S.of(context).table),
+                  padding: const EdgeInsets.all(50),
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 3, 61, 58),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Text(
+                    S.of(context).table,
+                    style: const TextStyle(fontSize: 20, color: Colors.white),
+                  ),
                 ),
               )
             ],
