@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mycollege/utils/key_of_storage.dart';
-import '../../models/day_table_model.dart';
+import '../../models/table_model/day_table_model.dart';
 import '../../../utils/constant.dart';
 import '../../../utils/def.dart';
 

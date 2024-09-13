@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'data/models/day_table_model.dart';
-import 'data/models/day_table_model_adapter.dart';
+import 'package:mycollege/data/models/task_model/task_model_adapter.dart';
+import 'data/models/table_model/day_table_model.dart';
+import 'data/models/table_model/day_table_model_adapter.dart';
 import 'generated/l10n.dart';
 import 'package:mycollege/utils/constant.dart';
 import 'package:mycollege/utils/my_routes.dart';
@@ -15,6 +16,7 @@ void main() async {
   // Directory dir = await getApplicationDocumentsDirectory();
   await Hive.initFlutter((await getApplicationDocumentsDirectory()).path);
   Hive.registerAdapter(DayTableModelAdapter());
+  Hive.registerAdapter(TaskModelAdapter());
 
   await Hive.openBox<DayTableModel>(tableBox);
 

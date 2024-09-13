@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:hive_flutter/adapters.dart';
-import 'package:mycollege/data/models/day_table_model.dart';
+import 'package:mycollege/data/models/table_model/day_table_model.dart';
 import 'package:mycollege/presentation/widgets/myTable/body_cell.dart';
 import 'package:mycollege/presentation/widgets/myTable/day_name_cell.dart';
 import 'package:mycollege/presentation/widgets/myTable/interval_name_cell.dart';

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:mycollege/data/models/day_table_model.dart';
+import 'package:mycollege/data/models/table_model/day_table_model.dart';
 import 'constant.dart';
 
 Box box = Hive.box<DayTableModel>(tableBox);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mycollege/data/models/day_table_model.dart';
+import 'package:mycollege/data/models/table_model/day_table_model.dart';
 
 class DayNameCell extends StatelessWidget {
   const DayNameCell({super.key, required this.day});
