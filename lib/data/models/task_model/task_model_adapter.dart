@@ -1,5 +1,6 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:mycollege/data/models/task_model/task_model.dart';
+
+import 'task_model.dart';
 
 class TaskModelAdapter extends TypeAdapter<TaskModel> {
   @override

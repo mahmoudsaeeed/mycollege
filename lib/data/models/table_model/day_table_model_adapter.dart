@@ -1,4 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
+
 import 'day_table_model.dart';
 
 class DayTableModelAdapter extends TypeAdapter<DayTableModel> {

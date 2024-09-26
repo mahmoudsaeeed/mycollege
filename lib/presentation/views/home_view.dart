@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+
 import '../../generated/l10n.dart';
 import '../../utils/constant.dart';
 
@@ -30,7 +32,23 @@ class HomeView extends StatelessWidget {
                     style: const TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
-              )
+              ),
+              const Gap(20),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, myTaskView);
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(50),
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 3, 61, 58),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: const Text(
+                    "تاسكات",
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

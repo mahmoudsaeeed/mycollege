@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+
 import 'def.dart';
+//!  ###### [ Boxs name ] ##########  !//
 
-const String tableBox = "table";
+const String tableBoxName = "table";
 const String secondBoxName = "data";
+const String taskboxName = "task";
 
+//! ####### [ pages name ] ##########
 const String homeView = "/";
 const String myTableView = "myTable";
+const String myTaskView = "myTask";
 
 //! ####################
 //!   secondBoxName variable
@@ -15,11 +20,7 @@ const String intervalSharedPref = "interval";
 
 //! ####################
 
-final List<String> intervalTypes = [
-  "محاضرة",
-  "سكشن",
-  "فاضي"
-];
+final List<String> intervalTypes = ["محاضرة", "سكشن", "فاضي"];
 
 //* names of arabic days
 Map<Days, String> arDay = {

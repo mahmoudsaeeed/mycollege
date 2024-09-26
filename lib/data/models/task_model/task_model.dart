@@ -8,7 +8,7 @@ class TaskModel extends HiveObject {
 
   TaskModel({
     required this.taskName,
-    required this.deadline,
+    this.deadline = "",
     required this.details,
     required this.isSelected,
   });

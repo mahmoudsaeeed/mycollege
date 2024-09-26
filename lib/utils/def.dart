@@ -3,10 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:mycollege/data/models/table_model/day_table_model.dart';
+import 'package:mycollege/data/models/task_model/task_model.dart';
+
 import 'constant.dart';
 
-Box box = Hive.box<DayTableModel>(tableBox);
+//!  ########   [ Boxs defination ]  ########
+Box tableBox = Hive.box<DayTableModel>(tableBoxName);
 Box secondBox = Hive.box(secondBoxName);
+Box<TaskModel> taskBox = Hive.box<TaskModel>(taskboxName);
 
 enum Days {
   Saturday,
@@ -17,10 +21,6 @@ enum Days {
   Thursday,
 }
 
-enum LecType {
-  Lecture ,
-  Section
-}
 //* -------------- TextEditingControllers --------------------*//
 
 TextEditingController satController0 = TextEditingController();
@@ -52,3 +52,17 @@ TextEditingController thuController0 = TextEditingController();
 TextEditingController thuController1 = TextEditingController();
 TextEditingController thuController2 = TextEditingController();
 TextEditingController thuController3 = TextEditingController();
+////////////////////////////////////////////////////////////////
+
+TextEditingController? taskName;
+TextEditingController? taskDetail;
+// TextEditingController? deadlineController;
+
+////////////////////////////////////////////////////////////////
+
+TextEditingController? taskEditName; 
+TextEditingController? taskEditDetail;
+// TextEditingController taskDeadlineEdit = TextEditingController();
+
+// TextEditingController taskName = TextEditingController();
+// TextEditingController taskName = TextEditingController();

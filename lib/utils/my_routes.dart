@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../presentation/views/TablePart/my_table_view.dart';
+import '../presentation/views/TaskPart/task_view.dart';
 import '../presentation/views/home_view.dart';
-import '../presentation/views/my_table_view.dart';
 import 'constant.dart';
 
 class Routes {
@@ -16,6 +17,9 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const MyTableView(),
         );
+
+      case myTaskView:
+        return MaterialPageRoute(builder: (context) => const TaskView());
     }
     return null;
   };
